@@ -209,7 +209,7 @@ GEM
     zeitwerk (2.5.4)
 
 PLATFORMS
-  x86_64-darwin-20
+  x86_64-darwin-21
 
 DEPENDENCIES
   bootsnap
@@ -230,7 +230,7 @@ DEPENDENCIES
   webdrivers
 
 RUBY VERSION
-   ruby 2.7.3p183
+   ruby 3.1.2p20
 
 BUNDLED WITH
-   2.2.25
+   2.3.11
