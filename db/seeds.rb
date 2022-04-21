@@ -5,3 +5,4 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+darren = Professor.create({name: "Darren Ashmore", subject: "Japanese Popular Culture", rating: 4.5, difficulty: 1.5})
