@@ -37,25 +37,25 @@ class ProfessorsController < ApplicationController
 
   # PATCH/PUT /professors/1 or /professors/1.json
   def update
-    respond_to do |format|
-      if @professor.update(professor_params)
-        format.html { redirect_to professor_url(@professor), notice: "Professor was successfully updated." }
-        format.json { render :show, status: :ok, location: @professor }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @professor.errors, status: :unprocessable_entity }
-      end
-    end
+    # respond_to do |format|
+    #   if @professor.update(professor_params)
+    #     format.html { redirect_to professor_url(@professor), notice: "Professor was successfully updated." }
+    #     format.json { render :show, status: :ok, location: @professor }
+    #   else
+    #     format.html { render :edit, status: :unprocessable_entity }
+    #     format.json { render json: @professor.errors, status: :unprocessable_entity }
+    #   end
+    # end
   end
 
   # DELETE /professors/1 or /professors/1.json
   def destroy
-    @professor.destroy
+    # @professor.destroy
 
-    respond_to do |format|
-      format.html { redirect_to professors_url, notice: "Professor was successfully destroyed." }
-      format.json { head :no_content }
-    end
+    # respond_to do |format|
+    #   format.html { redirect_to professors_url, notice: "Professor was successfully destroyed." }
+    #   format.json { head :no_content }
+    # end
   end
 
   private

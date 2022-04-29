@@ -1,4 +1,5 @@
 class StudentStoriesController < ApplicationController
+  skip_before_action :authenticate_user!, only: :index
   #before_action :set_student_story, only: %i[create new]
 
   # GET /student_stories or /student_stories.json
