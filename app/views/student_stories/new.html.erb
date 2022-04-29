@@ -1,9 +1,10 @@
-<h1>New student story</h1>
+<h1><%= @professor.name  %></h1>
+<h3>New student story</h3>
 
 <%= render "form", student_story: @student_story %>
 
 <br>
 
 <div>
-  <%= link_to "Back to student stories", student_stories_path %>
+  <%# <%= link_to "Back to student stories", professor_student_stories_path(@professor) %>
 </div>

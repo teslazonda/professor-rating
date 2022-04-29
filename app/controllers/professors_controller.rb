@@ -8,6 +8,7 @@ class ProfessorsController < ApplicationController
 
   # GET /professors/1 or /professors/1.json
   def show
+    @professor = Professor.find(params[:id])
   end
 
   # GET /professors/new

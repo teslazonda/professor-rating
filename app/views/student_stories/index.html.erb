@@ -1,14 +1,18 @@
 <p style="color: green"><%= notice %></p>
-
-<h1>Student stories</h1>
+<h1>
+<%= @professor.name %>
+<%= @professor.subject %>
+<p>Rating:</p>
+<%= @professor.rating %>
+</h1>
+<h3>Student stories:</h3>
 
 <div id="student_stories">
   <% @student_stories.each do |student_story| %>
     <%= render student_story %>
-    <p>
-      <%= link_to "Show this student story", student_story %>
-    </p>
+  <br>
   <% end %>
 </div>
 
-<%= link_to "New student story", new_student_story_path %>
+<%= link_to "New student story", new_professor_student_story_path(@professor) %>
+<%= link_to "Back to Professors", professors_path %>

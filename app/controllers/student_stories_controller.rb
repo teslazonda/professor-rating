@@ -1,9 +1,10 @@
 class StudentStoriesController < ApplicationController
-  before_action :set_student_story, only: %i[ show edit update destroy ]
+  #before_action :set_student_story, only: %i[create new]
 
   # GET /student_stories or /student_stories.json
   def index
-    @student_stories = StudentStory.all
+    @professor = Professor.find(params[:professor_id])
+    @student_stories = @professor.student_stories
   end
 
   # GET /student_stories/1 or /student_stories/1.json
@@ -12,6 +13,7 @@ class StudentStoriesController < ApplicationController
 
   # GET /student_stories/new
   def new
+    @professor = Professor.find(params[:professor_id])
     @student_story = StudentStory.new
   end
 
@@ -22,15 +24,14 @@ class StudentStoriesController < ApplicationController
   # POST /student_stories or /student_stories.json
   def create
     @student_story = StudentStory.new(student_story_params)
+    @professor = Professor.find(params[:professor_id])
+    @student_story.professor = @professor
 
-    respond_to do |format|
-      if @student_story.save
-        format.html { redirect_to student_story_url(@student_story), notice: "Student story was successfully created." }
-        format.json { render :show, status: :created, location: @student_story }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @student_story.errors, status: :unprocessable_entity }
-      end
+    if
+    @student_story.save
+    redirect_to professor_student_stories_path(@professor)
+    else
+    render :new
     end
   end
 

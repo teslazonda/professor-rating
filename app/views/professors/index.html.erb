@@ -1,14 +1,16 @@
+<div class="col-lg-8 mx-auto">
+<h1>Professors</h1>
 <p style="color: green"><%= notice %></p>
 
-<h1>Professors</h1>
 
 <div id="professors">
   <% @professors.each do |professor| %>
     <%= render professor %>
     <p>
-      <%= link_to "Show this professor", professor %>
+      <%= link_to "Show this professor", professor_student_stories_path(professor) %>
     </p>
   <% end %>
 </div>
 
 <%= link_to "New professor", new_professor_path %>
+</div>
